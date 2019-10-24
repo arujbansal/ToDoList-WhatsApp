@@ -27,3 +27,16 @@ def format_command_dict(commands_dict):
         final_msg[i] = f'{str(i)}. {final_msg[i]}'
 
     return ".\n".join(final_msg)
+
+
+def fetch_column_from_db(column_name, phone_number, table_name, cur):
+    """
+    Gets the information from a particular column in the database.
+    :param column_name: Name of column in database.
+    :param phone_number: Phone number of user.
+    :param table_name: The name of the table in the database.
+    :param cur: Database cursor.
+    :return: List of information.
+    """
+    cur.execute(f"SELECT {column_name} FROM {table_name} WHERE(Number = '{phone_number}')")
+    return cur.fetchone()
