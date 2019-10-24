@@ -11,11 +11,11 @@ c = con.cursor()  # Database connection cursor.
 
 @app.route('/', methods=['POST'])
 def whatsapp_message():
-    phone_number = request.form['From']  # Phone number associated with message.
+    phone_number = request.form['From']  # Phone number associated with the message.
     message_body = request.form['Body']  # The body of the message.
     resp = MessagingResponse()
 
-    db_users_table = info_in_db(c, "Users")  # Gets all the information present in the Users table
+    db_users_table = info_in_db(c, "Users")  # Gets all the information present in the Users table.
 
     return 'Hello World'
 
