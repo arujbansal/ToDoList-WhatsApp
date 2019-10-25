@@ -5,6 +5,7 @@ def info_in_db(cur, table_name):
     :param table_name: The name of the table where you want to get the data from.
     :return: All the data in the table.
     """
+
     info = cur.execute(f"SELECT * FROM {table_name}")
     return [i for i in info]
 
@@ -19,6 +20,7 @@ def format_command_dict(commands_dict):
     :param commands_dict: The dictionary containing the commands.
     :return: A string ready to be sent to the user.
     """
+
     final_msg = []
     for k, v in commands_dict:
         final_msg.append(f'{k} - {v}')
@@ -31,12 +33,55 @@ def format_command_dict(commands_dict):
 
 def fetch_column_from_db(column_name, phone_number, table_name, cur):
     """
-    Gets the information from a particular column in the database.
+    Gets the information from a particular column in the database using a phone number.
     :param column_name: Name of column in database.
     :param phone_number: Phone number of user.
     :param table_name: The name of the table in the database.
     :param cur: Database cursor.
     :return: List of information.
     """
-    cur.execute(f"SELECT {column_name} FROM {table_name} WHERE(Number = '{phone_number}')")
+
+    cur.execute(f"SELECT {column_name} FROM {table_name} WHERE(Phone = '{phone_number}')")
     return cur.fetchone()
+
+
+def update_column(column, table, phone_number, cursor, connection, new_info):
+    """
+    Updates a column in the database using a phone number.
+    :param column: Column in the database.
+    :param table: Table in the database.
+    :param phone_number: Phone number of the user.
+    :param cursor: Database cursor.
+    :param connection: Database connection
+    :param new_info: New information to be put in the column.
+    """
+
+    cursor.execute(f"UPDATE {table} SET {column} = '{new_info}' WHERE(Phone = '{phone_number}')")
+    connection.commit()
+
+
+def reformat_db_info(info):
+    """
+    Reformats database info into a proper list.
+    :param info: QuerySet returned from database.
+    :return: QuerySet converted to a list.
+    """
+
+    temp = ""
+    for i in info:
+        temp += i
+
+    return temp.split()
+
+
+def add_numbering(info):
+    """
+    Adds a serial number to each task.
+    :param info: The list of tasks.
+    :return: String with proper numbering.
+    """
+
+    for i in range(len(info)):
+        info[i] = f'{i}. {info[i]}'
+
+    return "".join(info)

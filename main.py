@@ -1,7 +1,8 @@
 from flask import Flask, request
 from twilio.twiml.messaging_response import MessagingResponse
 import sqlite3
-from helper_functions import info_in_db, format_command_dict, fetch_column_from_db
+from helper_functions import info_in_db, format_command_dict, fetch_column_from_db, update_column, reformat_db_info, \
+    add_numbering
 
 app = Flask(__name__)
 
@@ -26,7 +27,13 @@ def whatsapp_message():
     if message_body.lower() == 'a':
         to_add = message_body[2:]  # String to add to the database (task entered by the user).
         tasks = fetch_column_from_db("Tasks", phone_number, "Users", c)  # Retrieving current tasks of the user.
+        tasks = reformat_db_info(tasks)  # Makes into proper list.
         tasks.append(f'{to_add}.\n')  # Adding new task to user's current task list.
+        tasks_for_db = "".join(tasks)  # Tasks in string format to add to the database.
+        update_column("Tasks", "Users", phone_number, c, con, tasks_for_db)  # Updates database information.
+
+        msg = "Your updated tasks list is:\n"
+        msg += add_numbering(tasks)  # Ready to be sent to the user.
 
     resp.message(msg)
     return str(resp)
