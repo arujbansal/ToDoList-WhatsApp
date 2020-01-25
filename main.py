@@ -9,35 +9,46 @@ app = Flask(__name__)
 con = sqlite3.connect('user_info.db', check_same_thread=False)  # Database connection.
 c = con.cursor()  # Database connection cursor.
 
-available_commands = {'H': 'Available commands', 'A': 'A (item to be added)'}  # Command : Usage/Description
+available_commands = {'H': 'Available commands', 'A': 'A (item to be added)',
+                      'R': 'R (Number of item to be removed)'}  # Command : Usage/Description
 
 
 @app.route('/', methods=['POST'])
 def whatsapp_message():
     phone_number = request.form['From']  # Phone number associated with the message.
     message_body = request.form['Body']  # The body of the message.
+    f_let = message_body[0].lower()  # First letter of received msg.
     resp = MessagingResponse()
 
-    db_users_table = info_in_db(c, "Users")  # Gets all the information present in the Users table
-    msg = ""
-
-    if message_body.lower() == 'h':
+    if f_let == 'h':  # Command = Help
         msg = format_command_dict(available_commands)  # Message now contains help information.
-
-    if message_body.lower() == 'a':
-        to_add = message_body[2:]  # String to add to the database (task entered by the user).
+    elif f_let == 'c':  # Command = Clear
+        update_column("Tasks", "Users", phone_number, c, con, "")  # Updates database information. Clears task list.
+        msg = "Your tasks list has been cleared."
+    else:
+        msg_workon = message_body[2:]  # String to be worked on.
         tasks = fetch_column_from_db("Tasks", phone_number, "Users", c)  # Retrieving current tasks of the user.
         tasks = reformat_db_info(tasks)  # Makes into proper list.
-        tasks.append(f'{to_add}.\n')  # Adding new task to user's current task list.
+
+        if f_let == 'a':  # Command = Add
+            tasks.append(f'{msg_workon}.\n')  # Adding new task to user's current task list.
+        elif f_let == 'r':  # Command = Remove
+            tasks.pop(int(msg_workon))  # Removing task from user's current task list.
+
         tasks_for_db = "".join(tasks)  # Tasks in string format to add to the database.
         update_column("Tasks", "Users", phone_number, c, con, tasks_for_db)  # Updates database information.
 
-        msg = "Your updated tasks list is:\n"
-        msg += add_numbering(tasks)  # Ready to be sent to the user.
+        if not tasks:
+            msg = "No remaining tasks..."
+        else:
+            msg = "Your updated tasks list is:\n"
+            msg += "\n".join(tasks)  # Ready to be sent to the user.
 
     resp.message(msg)
     return str(resp)
 
+
+# Bug: If task is in string format in database - meaning user has only 1 task, formatting is messed up because storage datatype needs to be list
 
 if __name__ == '__main__':
     app.run()

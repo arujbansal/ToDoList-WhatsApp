@@ -21,11 +21,11 @@ def format_command_dict(commands_dict):
     :return: A string ready to be sent to the user.
     """
 
-    final_msg = []
-    for k, v in commands_dict:
+    final_msg = ["Command - Usage"]
+    for k, v in commands_dict.items():
         final_msg.append(f'{k} - {v}')
 
-    for i in range(len(final_msg)):
+    for i in range(1, len(final_msg)):
         final_msg[i] = f'{str(i)}. {final_msg[i]}'
 
     return ".\n".join(final_msg)
@@ -81,7 +81,7 @@ def add_numbering(info):
     :return: String with proper numbering.
     """
 
-    for i in range(len(info)):
-        info[i] = f'{i}. {info[i]}'
+    for i in range(1, len(info)):
+        info[i] = f'{str(i)}. {info[i]}'
 
-    return "".join(info)
+    return '\n'.join(info)
