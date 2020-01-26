@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f2736972-ab6b-45dd-ae33-220a7cd43dfa" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/create_database.py" beforeDir="false" afterPath="$PROJECT_DIR$/create_database.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/helper_functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/helper_functions.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user_info.db" beforeDir="false" afterPath="$PROJECT_DIR$/user_info.db" afterDir="false" />
@@ -118,12 +117,7 @@
       <list>
         <serviceView>
           <treeState>
-            <expand>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:user_info" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-            </expand>
+            <expand />
             <select />
           </treeState>
         </serviceView>
@@ -145,7 +139,8 @@
       <workItem from="1571969324301" duration="1226000" />
       <workItem from="1571998000992" duration="13000" />
       <workItem from="1572015982208" duration="158000" />
-      <workItem from="1579963292206" duration="2730000" />
+      <workItem from="1579963292206" duration="2769000" />
+      <workItem from="1580032773817" duration="2028000" />
     </task>
     <servers />
   </component>
@@ -169,29 +164,29 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1579966089937">
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1580034845545">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1579966089937" />
-    <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1579966089936">
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1580034845545" />
+    <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1580034845544">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1579966089936" />
-    <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1579966089935">
+    <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1580034845544" />
+    <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1580034845543">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1579966089935" />
-    <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1579966089936">
+    <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1580034845543" />
+    <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1580034845544">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1579966089936" />
+    <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1580034845544" />
     <state width="219" height="457" key="HiddenNamespacesPopup" timestamp="1579964798197">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="219" height="457" key="HiddenNamespacesPopup/0.0.1440.900@0.0.1440.900" timestamp="1579964798197" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/ToDoList_WhatsApp$main.coverage" NAME="main Coverage Results" MODIFIED="1579966089925" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ToDoList_WhatsApp$main.coverage" NAME="main Coverage Results" MODIFIED="1580034845528" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ToDoList_WhatsApp$create_database.coverage" NAME="create_database Coverage Results" MODIFIED="1579964977291" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

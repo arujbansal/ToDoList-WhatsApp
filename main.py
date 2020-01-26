@@ -23,7 +23,7 @@ def whatsapp_message():
     if f_let == 'h':  # Command = Help
         msg = format_command_dict(available_commands)  # Message now contains help information.
     elif f_let == 'c':  # Command = Clear
-        update_column("Tasks", "Users", phone_number, c, con, "")  # Updates database information. Clears task list.
+        update_column("Tasks", "Users", phone_number, c, con, '')  # Updates database information. Clears task list.
         msg = "Your tasks list has been cleared."
     else:
         msg_workon = message_body[2:]  # String to be worked on.
@@ -33,7 +33,7 @@ def whatsapp_message():
         if f_let == 'a':  # Command = Add
             tasks.append(f'{msg_workon}.\n')  # Adding new task to user's current task list.
         elif f_let == 'r':  # Command = Remove
-            tasks.pop(int(msg_workon))  # Removing task from user's current task list.
+            tasks.pop(int(msg_workon) - 1)  # Removing task from user's current task list. 0 based indexing.
 
         tasks_for_db = "".join(tasks)  # Tasks in string format to add to the database.
         update_column("Tasks", "Users", phone_number, c, con, tasks_for_db)  # Updates database information.
@@ -41,14 +41,12 @@ def whatsapp_message():
         if not tasks:
             msg = "No remaining tasks..."
         else:
-            msg = "Your updated tasks list is:\n"
-            msg += "\n".join(tasks)  # Ready to be sent to the user.
+            msg = "Task list:\n"
+            msg += add_numbering(tasks)  # Ready to be sent to the user.
 
     resp.message(msg)
     return str(resp)
 
-
-# Bug: If task is in string format in database - meaning user has only 1 task, formatting is messed up because storage datatype needs to be list
 
 if __name__ == '__main__':
     app.run()

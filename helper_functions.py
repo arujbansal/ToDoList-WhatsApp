@@ -71,7 +71,10 @@ def reformat_db_info(info):
     for i in info:
         temp += i
 
-    return temp.split()
+    temp_list = temp.split(".\n")
+    temp_list.pop()
+
+    return [i + ".\n" for i in temp_list]
 
 
 def add_numbering(info):
@@ -81,7 +84,7 @@ def add_numbering(info):
     :return: String with proper numbering.
     """
 
-    for i in range(1, len(info)):
-        info[i] = f'{str(i)}. {info[i]}'
+    for i in range(len(info)):
+        info[i] = f'{str(i + 1)}. {info[i]}'
 
-    return '\n'.join(info)
+    return ''.join(info)
