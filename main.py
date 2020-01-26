@@ -1,7 +1,7 @@
 from flask import Flask, request
 from twilio.twiml.messaging_response import MessagingResponse
 import sqlite3
-from helper_functions import info_in_db, format_command_dict, fetch_column_from_db, update_column, reformat_db_info, \
+from helper_functions import format_command_dict, fetch_column_from_db, update_column, reformat_db_info, \
     add_numbering
 
 app = Flask(__name__)
@@ -10,7 +10,7 @@ con = sqlite3.connect('user_info.db', check_same_thread=False)  # Database conne
 c = con.cursor()  # Database connection cursor.
 
 available_commands = {'H': 'Available commands', 'A': 'A (item to be added)',
-                      'R': 'R (Number of item to be removed)'}  # Command : Usage/Description
+                      'R': 'R (Number of item to be removed)', 'C': 'Clears task list'}  # Command : Usage/Description
 
 
 @app.route('/', methods=['POST'])

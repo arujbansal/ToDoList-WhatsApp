@@ -140,7 +140,7 @@
       <workItem from="1571998000992" duration="13000" />
       <workItem from="1572015982208" duration="158000" />
       <workItem from="1579963292206" duration="2769000" />
-      <workItem from="1580032773817" duration="2028000" />
+      <workItem from="1580032773817" duration="2260000" />
     </task>
     <servers />
   </component>
@@ -164,29 +164,29 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1580034845545">
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1580035045785">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1580034845545" />
-    <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1580034845544">
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1580035045785" />
+    <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1580035045783">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1580034845544" />
-    <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1580034845543">
+    <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1580035045783" />
+    <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1580035045782">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1580034845543" />
-    <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1580034845544">
+    <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1580035045782" />
+    <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1580035045784">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1580034845544" />
+    <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1580035045784" />
     <state width="219" height="457" key="HiddenNamespacesPopup" timestamp="1579964798197">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="219" height="457" key="HiddenNamespacesPopup/0.0.1440.900@0.0.1440.900" timestamp="1579964798197" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/ToDoList_WhatsApp$main.coverage" NAME="main Coverage Results" MODIFIED="1580034845528" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ToDoList_WhatsApp$main.coverage" NAME="main Coverage Results" MODIFIED="1580035045765" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ToDoList_WhatsApp$create_database.coverage" NAME="create_database Coverage Results" MODIFIED="1579964977291" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
