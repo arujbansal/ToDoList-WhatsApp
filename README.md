@@ -10,7 +10,7 @@ This project uses the Twilio API to send and receive WhatsApp messages. Since th
 3. Run the add users file to add users to the database.
 4. Install ngrok (https://ngrok.com/product). Follow the instructions given on their website to set it up.
 5. Create an account on Twilio (https://www.twilio.com/).
-6. Run the ngrok server on port 5000 or whatever port the flask server is running on (instructions can be found on the ngrok website.)
-7. Follow the instructions given under Sandbox Participants (https://www.twilio.com/console/sms/whatsapp/sandbox).
+6. Follow the instructions given under Sandbox Participants (https://www.twilio.com/console/sms/whatsapp/sandbox).
+7. Run the ngrok server on port 5000 or whatever port the flask server is running on (instructions can be found on the ngrok website.)
 8. Add the ngrok URL to the WhatsApp sandbox area (configure the webhook at https://www.twilio.com/console/sms/whatsapp/sandbox).
 9. Start sending messages!
