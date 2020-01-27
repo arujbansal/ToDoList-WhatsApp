@@ -48,6 +48,21 @@ def update_column(column, table, phone_number, cursor, connection, new_info):
     connection.commit()
 
 
+def insert_column(table, username, phone_number, cursor, connection):
+    """
+    Updates a column in the database using a phone number.
+    :param table: Table in the database.
+    :param phone_number: Username of new user.
+    :param phone_number: Phone number of new user.
+    :param cursor: Database cursor.
+    :param connection: Database connection
+    """
+
+    cursor.execute(
+        f"INSERT INTO {table}('Username', 'Phone', 'Tasks') VALUES('{username}', 'whatsapp:{phone_number}', '')")
+    connection.commit()
+
+
 def reformat_db_info(info):
     """
     Reformats database info into a proper list.
