@@ -10,8 +10,8 @@ print("+(countrycode)(number)")
 print("Eg. +91981038384 for a number in India")
 for user in range(num):
     print("\n")
-    name = f'Enter User No. {user}s username: '
-    number = f'Enter User No. {user}s number: '
-    insert_column("Tasks", name, number, con, c)
+    name = input(f'Enter User No. {user + 1}s username: ')
+    number = input(f'Enter User No. {user + 1}s number: ')
+    insert_column("Users", name, number, c, con)
 
 con.close()
