@@ -13,7 +13,7 @@ available_commands = {'H': 'Available commands', 'A': 'A (item to be added)',
                       'R': 'R (Number of item to be removed)', 'C': 'Clears task list'}  # Command : Usage/Description
 
 
-@app.route('/', methods=['POST'])
+@app.route('/sms', methods=['POST'])
 def whatsapp_message():
     phone_number = request.form['From']  # Phone number associated with the message.
     message_body = request.form['Body']  # The body of the message.
