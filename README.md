@@ -1,5 +1,5 @@
 # ToDoList-WhatsApp
-Hey there! This repository contains the code for a WhatsApp bot. Please note that this is still undergoing work. Some things might break. This bot will basically let you add tasks to a list and remove them. It formats them in a clear readable manner. The code has been divided into functions and moved into a seperate file (helper functions). All the code is clearly documented.
+This repository contains the code for a WhatsApp bot. Please note that this is still undergoing work. Some things might break. This bot will basically let you add tasks to a list and remove them. It formats them in a clear readable manner. The code has been divided into functions and moved into a seperate file (helper functions). All the code is clearly documented.
 
 # Tweaking The Code
 This project uses the Twilio API to send and receive WhatsApp messages. Since the basic function of sending WhatsApp messages is the same, you can use the basic project structure to add your own functionality. Eg. An AI chatbot can be implemented.
